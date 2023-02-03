@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+}
+
+.header-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left{
+    display: flex;
+    /*justify-content: flex-start;*/
+}
+
+.header-right{
+    display: flex;
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    margin-right: 2rem;
+}
+
+.logop1{
+    color:gold;
+}
+
+.logop2{
+    color:forestgreen;
+}
+
+.delivery-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-button{
+    display: flex;
+    border: none;
+    background: white;
+    margin-right: 3rem;
+    align-items: center;
+}
+
+.my-cart-button{
+    display: flex;
+    border: none;
+    background: green;
+    align-items: center;
+    margin: 1px 6px;
+}
+
+.cart-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.my-cart{
+    display: flex;
+}
+
+.navigation-bar{
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+}
+
+.nav-details{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-buttons{
+    border: none;
+    background: white;
+    margin-right: 3rem;
+    align-items: center;
+}
+
+.navigation-bar{
+    margin-top: 25px;
+}
+
+.main-content-details{
+    display: flex;
+    border: 2px solid grey;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+.all{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+    background-color: chartreuse;
+    border-left-color: green;
+}
+
+.fresh-vegetables{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+}
+
+.fresh-fruits{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+}
+
+.exotics{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+}
+
+.seasonal{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+}
+
+.organic-hydroponic{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+}
+
+.freshly-cut-sprouts{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+}
+
+.all-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.fresh-vegetables-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.fresh-fruits-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.exotics-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.seasonal-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.organic-hydroponic-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.freshly-cut-sprouts-image{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+
+.all-text{
+    display: flex;
+}
+
+.fresh-vegetables-text{
+    display: flex;
+}
+
+.fresh-fruits-text{
+    display: flex;
+}
+
+.exotics-text{
+    display: flex;
+}
+
+.seasonal-text{
+    display: flex;
+}
+
+.organic-hydroponic-text{
+    display: flex;
+}
+
+.freshly-cut-sprouts-text{
+    display: flex;
+}
+
+.center-bar{
+    flex-grow: 2;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-text{
+    display: flex;
+}
+
+.top-bar-dropdown{
+    display: flex;
+}
+
+.display-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.cost p{
+    text-decoration: line-through;
+}
+
+.cost-add{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.card{
+    position: relative;
+    border: 2px solid grey;
+}
+
+.card-images{
+    height: 10rem;
+    width: 18rem;
+}
+
+.offer{
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    background-color: blue;
+    color: white;
+}
+
+.source{
+    position: absolute;
+    top: 55%;
+    right: 12px;
+    color: rgb(121, 236, 121);
+    background-color: rgb(214, 248, 214);
+}
+
+.cost p{
+    margin-top:0.5px;
+}
+
+.add-button{
+    color: green;
+    background: transparent;
+}
+
+button{
+    cursor: pointer;
+}
