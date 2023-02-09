@@ -121,6 +121,10 @@ body {
     border-left-color: green;*/
 }
 
+.sidebar-button:hover{
+    background-color: green;
+}
+
 .sidebar-image{
     display: flex;
     height: 2rem;
