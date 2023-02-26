@@ -11,18 +11,18 @@
         
         <main class="wrapper">
 
-            <main class="flex-container">
+            <main class="flexContainer">
                 <section class="header">
-                    <header class="header-details">
+                    <header class="headerDetails">
                         
-                        <section class="header-left">
+                        <section class="headerLeft">
                             <div class="logo">
-                                <span class="logop1">blink</span>
-                                <span class="logop2">it</span>
+                                <span class="logoP1">blink</span>
+                                <span class="logoP2">it</span>
                             </div>
-                            <div class="delivery-details">
+                            <div class="deliveryDetails">
                                 <label for="delivery area">Delivery in 10 minutes</label>
-                                    <select name="delivery-area" class="delivery-area">
+                                    <select name="deliveryArea" class="deliveryArea">
                                     <option value="delhi">Delhi, India</option>
                                     <option value="bangalore">Bangalore, India</option>
                                     <option value="mumbai">Mumbai, India</option>
@@ -31,28 +31,28 @@
                             </div>
                         </section>
                         
-                        <section class="header-right">
-                            <button class="login-button">Login</button>
-                            <button class="my-cart-button">
-                                <img class="cart-image" src="images/cart-image.png">
-                                <strong class="my-cart">My Cart</strong>
+                        <section class="headerRight">
+                            <button class="loginButton">Login</button>
+                            <button class="myCartButton">
+                                <img class="cartImage" src="images/cart-image.png">
+                                <strong class="myCart">My Cart</strong>
                             </button>
                         </section>
                     </header>
                 </section>
                 
-                <section class="navigation-bar">
-                    <div class="nav-details">
-                        <button class="nav-buttons">Vegetables & Fruits</button>
-                        <button class="nav-buttons">Dairy & Breakfast</button>
-                        <button class="nav-buttons">Munchies</button>
-                        <button class="nav-buttons">Cold Drinks & Juices</button>
-                        <button class="nav-buttons">Instant & Frozen Food</button>
-                        <button class="nav-buttons">Tea, Coffee & Health Drinks</button>
-                        <button class="nav-buttons">Bakery & Biscuits</button>
+                <section class="navigationBar">
+                    <div class="navDetails">
+                        <button class="navButtons">Vegetables & Fruits</button>
+                        <button class="navButtons">Dairy & Breakfast</button>
+                        <button class="navButtons">Munchies</button>
+                        <button class="navButtons">Cold Drinks & Juices</button>
+                        <button class="navButtons">Instant & Frozen Food</button>
+                        <button class="navButtons">Tea, Coffee & Health Drinks</button>
+                        <button class="navButtons">Bakery & Biscuits</button>
 
-                        <label for="other-items"></label>
-                        <select class="nav-buttons" name="other-items" id="other-items">
+                        <label for="moreTypesOfProducts"></label>
+                        <select class="navButtons" name="moreTypesOfProducts" id="moreTypesOfProducts">
                         <option value="more">More</option>
                         <option value="a">A</option>
                         <option value="b">B</option>
@@ -61,9 +61,9 @@
                     </div>
                 </section>
 
-                <section class="main-content">
-                    <div class="main-content-details">
-                        <div class="sidebar">
+                <section class="mainContent">
+                    <div class="mainContentDetails">
+                        <div id="sidebar">
                             <!-- <button class="sidebar-button">
                                 <img class="sidebar-image" src="images/potato-img.png">
                                 <p class="sidebar-text">All</p>
@@ -94,12 +94,12 @@
                             </button> -->
                         </div>
 
-                        <div class="center-bar">
-                            <div class="top-bar">
-                                <strong class="top-bar-text">Buy Fresh Vegetables Online</strong>
-                                <div class="top-bar-dropdown">
-                                    <label for="sort-by">Sort By</label>
-                                    <select name="sort-by" id="sort-by">
+                        <div class="centerBar">
+                            <div class="topBar">
+                                <strong class="topBarText">Buy Fresh Vegetables Online</strong>
+                                <div class="topBarDropdown">
+                                    <label for=productsSortBy">Sort By</label>
+                                    <select name="productsSortBy" id="productsSortBy">
                                     <option value="relevance">Relevance</option>
                                     <option value="a">A</option>
                                     <option value="b">B</option>
@@ -108,7 +108,7 @@
                                 </div>
                             </div>
 
-                            <div class="display-items">
+                            <div id="productsToBeSold">
                                 <!-- <div class="card one">
                                     <div class="offer">
                                         <strong> 11% OFF</strong>
@@ -380,7 +380,7 @@
             <p>Bla Bla Bla Bla</p>
         </div> -->
 
-        <script src="javascript/myscripts.js"></script>
+        <script type="module" src="javascript/controller.js"></script>
     </body>
 
 </html>

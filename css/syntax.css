@@ -2,17 +2,17 @@ body {
     margin: 0;
 }
 
-.header-details{
+.headerDetails{
     display: flex;
     justify-content: space-between;
 }
 
-.header-left{
+.headerLeft{
     display: flex;
     /*justify-content: flex-start;*/
 }
 
-.header-right{
+.headerRight{
     display: flex;
 }
 
@@ -24,24 +24,24 @@ body {
     border-right: 1px solid grey;
 }
 
-.logop1{
+.logoP1{
     color:gold;
 }
 
-.logop2{
+.logoP2{
     color:forestgreen;
 }
 
-.delivery-details{
+.deliveryDetails{
     display: flex;
     flex-direction: column;
 }
 
-.delivery-area{
+.deliveryArea{
     border: none;
 }
 
-.login-button{
+.loginButton{
     display: flex;
     border: none;
     background: white;
@@ -49,7 +49,7 @@ body {
     align-items: center;
 }
 
-.my-cart-button{
+.myCartButton{
     display: flex;
     border: none;
     background: green;
@@ -57,43 +57,43 @@ body {
     margin: 1px 6px;
 }
 
-.cart-image{
+.cartImage{
     display: flex;
     height: 2rem;
     width: 2rem;
 }
 
-.my-cart{
+.myCart{
     display: flex;
 }
 
-.navigation-bar{
+.navigationBar{
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
 }
 
-.nav-details{
+.navDetails{
     display: flex;
     justify-content: center;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-.nav-buttons{
+.navButtons{
     border: none;
     background: white;
     margin-right: 3rem;
     align-items: center;
 }
 
-.main-content {
+.mainContent {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
 }
 
-.main-content-details{
+.mainContentDetails{
     display: flex;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
@@ -101,12 +101,12 @@ body {
    /* border: 2px solid grey;*/
 }
 
-.sidebar{
+#sidebar{
     display: flex;
     flex-direction: column;
 }
 
-.sidebar-button{
+.sidebarButton{
     display: flex;
     align-items: center;
     background-color: white;
@@ -121,11 +121,11 @@ body {
     border-left-color: green;*/
 }
 
-.sidebar-button:hover{
+.sidebarButton:hover{
     background-color: green;
 }
 
-.sidebar-image{
+.sidebarImage{
     display: flex;
     height: 2rem;
     width: 2rem;
@@ -133,15 +133,15 @@ body {
     margin-bottom: 1rem;
 }
 
-.sidebar-text{
+.sidebarText{
     display: flex;
 }
 
-.center-bar{
+.centerBar{
     flex-grow: 2;
 }
 
-.top-bar{
+.topBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,19 +149,19 @@ body {
     border-bottom: 1px solid grey;
 }
 
-.top-bar-text{
+.topBarText{
     display: flex;
     margin-bottom: 1rem;
     margin-left: 0.5rem;
     margin-top: 1rem;
 }
 
-.top-bar-dropdown{
+.topBarDropdown{
     display: flex;
     margin-right: 1rem;
 }
 
-.display-items{
+#productsToBeSold{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
@@ -170,7 +170,7 @@ body {
     text-decoration: line-through;
 }
 
-.cost-add{
+.costAdd{
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -181,7 +181,7 @@ body {
     border-left: 1px solid grey;
 }
 
-.card-images{
+.cardImages{
     height: 10rem;
     width: 18rem;
 }
@@ -210,7 +210,7 @@ body {
     margin-top:0.5px;
 }
 
-.add-button{
+.addButton{
     color: green;
     background: transparent;
 }
