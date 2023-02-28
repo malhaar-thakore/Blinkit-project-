@@ -19,7 +19,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -31,7 +34,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 32',
         oldCost: 'Rs. 41',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -43,7 +49,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 17',
         oldCost: 'Rs. 19',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -55,7 +64,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 10',
         oldCost: 'Rs. 12',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -67,7 +79,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -79,7 +94,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 19',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshVegetables,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
 
@@ -92,7 +110,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -104,7 +125,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 32',
         oldCost: 'Rs. 41',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -116,7 +140,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 17',
         oldCost: 'Rs. 19',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -128,7 +155,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 10',
         oldCost: 'Rs. 12',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -140,7 +170,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshFruits,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
 
@@ -153,7 +186,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -165,7 +201,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 32',
         oldCost: 'Rs. 41',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -177,7 +216,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 17',
         oldCost: 'Rs. 19',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -189,7 +231,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 10',
         oldCost: 'Rs. 12',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.exotics,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
 
@@ -202,7 +247,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.seasonal
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.seasonal,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -214,7 +262,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 32',
         oldCost: 'Rs. 41',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.seasonal
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.seasonal,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -226,7 +277,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 17',
         oldCost: 'Rs. 19',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.seasonal
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.seasonal,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
 
@@ -239,7 +293,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.organicHydroponic
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.organicHydroponic,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
     {
@@ -251,7 +308,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 32',
         oldCost: 'Rs. 41',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.organicHydroponic
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.organicHydroponic,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     },
 
 
@@ -264,7 +324,10 @@ const DISPLAY_PRODUCTS_CONTENT = [
         newCost: 'Rs. 15',
         oldCost: 'Rs. 17',
         addButton: 'ADD',
-        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshlyCutSprouts
+        categories: CATEGORY_TYPES.card + ' ' + CATEGORY_TYPES.all + ' ' + CATEGORY_TYPES.freshlyCutSprouts,
+        minusButton: '-',
+        plusButton: '+',
+        productCount: 0
     }
 ]
 
