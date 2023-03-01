@@ -20,13 +20,19 @@ function makeDisplayProducts(offer, image, source, title, quantity, newCost, old
     this.categories = categories;
     this.minusButton = minusButton;
     this.plusButton = plusButton;
-    this.productCount = productCount; 
+    if(localStorage.getItem(title) == null){
+        this.productCount = productCount;
+    } 
+    else{
+        this.productCount = parseInt(localStorage.getItem(title));
+    }
 }
 
 const model = {
     init(){
         this.sidebar();
         this.displayProducts();
+        //this.updateDisplayProductsFromLocalStorage();
     },
 
     sidebar(){
@@ -101,6 +107,11 @@ const model = {
         else{
             return false;
         }
+    },
+
+    updateCurrentProductContent(ind, val){
+        this.DISPLAY_PRODUCTS_CONTENT[ind].productCount+=val;
+        localStorage.setItem(this.DISPLAY_PRODUCTS_CONTENT[ind].title, this.DISPLAY_PRODUCTS_CONTENT[ind].productCount);
     },
 
     // getTotalCost(){
@@ -365,7 +376,17 @@ const view = {
                 const currentProduct = this.makeCurrentProduct(title, productCount);
                 this.productsInCart.append(currentProduct);
             }
+            const showAllProducts = this.makeShowAllProducts();
             // this.productsInCart.append(controller.getTotalCost());
+            this.productsInCart.append(showAllProducts);
+
+            function callingClickingShowAllProducts(){
+                this.clickingShowAllProducts();
+            };
+            let bindingCallingClickingShowAllProducts = callingClickingShowAllProducts.bind(this);
+            showAllProducts.addEventListener("click", bindingCallingClickingShowAllProducts);
+            
+            
             const flexContainer = document.getElementById('flexContainer');
             flexContainer.append(this.productsInCart);
         },
@@ -386,6 +407,17 @@ const view = {
             const currentProduct = document.createElement('div');
             currentProduct.append(title, productCount);
             return currentProduct;
+        },
+
+        makeShowAllProducts(){
+            const showAllProducts = document.createElement('button');
+            showAllProducts.innerHTML = 'Back To Products';
+            return showAllProducts;
+        },
+
+        clickingShowAllProducts(){
+            this.productsInCart.style.display = 'none';
+            this.mainContentDetails.style.display = 'flex';
         }
     }
 
@@ -396,6 +428,10 @@ const view = {
 const controller = {
     init(){
         model.init();
+        view.init();
+    },
+
+    viewInit(){
         view.init();
     },
 
@@ -417,13 +453,15 @@ const controller = {
 
     incrementProductCount(currentProductTitle, categoryType){
         let ind = this.findIndexOfProduct(currentProductTitle);
-        model.DISPLAY_PRODUCTS_CONTENT[ind].productCount++;
+        //model.DISPLAY_PRODUCTS_CONTENT[ind].productCount++;
+        model.updateCurrentProductContent(ind, 1)
         this.renderDisplayProductsView(categoryType);
     },
 
     decrementProductCount(currentProductTitle, categoryType){
         let ind = this.findIndexOfProduct(currentProductTitle);
-        model.DISPLAY_PRODUCTS_CONTENT[ind].productCount--;
+        //model.DISPLAY_PRODUCTS_CONTENT[ind].productCount--;
+        model.updateCurrentProductContent(ind, -1);
         this.renderDisplayProductsView(categoryType);
     },
 
