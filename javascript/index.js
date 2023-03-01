@@ -1,5 +1,7 @@
 //import { displayProductsView } from "./view";
 
+//import { DISPLAY_PRODUCTS_CONTENT } from "./models/displayProducts";
+
 function makeSidebarContent(categoryImage, categoryText, categoryType){
     this.categoryImage = categoryImage;
     this.categoryText = categoryText;
@@ -70,24 +72,44 @@ const model = {
         ]
     },
 
-    getFilteredProducts(categoryType){
+    getCategoriesFilteredProducts(categoryType){
         //this.categoryType = categoryType;
         //console.log(this.categoryType);
         const productsToBeDisplayed = this.DISPLAY_PRODUCTS_CONTENT.filter(this.belongsToCategory, categoryType);
         return productsToBeDisplayed;
     },
 
+    getProductCountFilteredProducts(){
+        const productsInCart = this.DISPLAY_PRODUCTS_CONTENT.filter(this.isAddedToCart);
+        return productsInCart;
+    },
+
     belongsToCategory(currentProduct){
         //console.log(this.categoryType);
-        if(currentProduct.categories.includes(this))
-        {
+        if(currentProduct.categories.includes(this)){
             return true;
         }
-        else
-        {
+        else{
             return false;
         }
-    }
+    },
+
+    isAddedToCart(currentProduct){
+        if(currentProduct.productCount > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    },
+
+    // getTotalCost(){
+    //     let totalCost = 0;
+    //     for(let i=0; i<this.DISPLAY_PRODUCTS_CONTENT.length; i++){
+    //         totalCost = totalCost + ((this.DISPLAY_PRODUCTS_CONTENT[i].newCost) * (this.DISPLAY_PRODUCTS_CONTENT[i].productCount));
+    //     }
+    //     return totalCost;
+    // }
 }
 
 
@@ -96,6 +118,7 @@ const view = {
     init(){
         this.sidebarView.init();
         this.displayProductsView.init();
+        this.cartView.init();
     },
 
     sidebarView : {
@@ -147,7 +170,7 @@ const view = {
         },
 
         render(categoryType){
-            const displayProductsContent = controller.getDisplayProductsContent(categoryType);
+            const displayProductsContent = controller.getCategoryDisplayProductsContent(categoryType);
             this.productsToBeSold.innerHTML = '';
             for(let i=0; i<displayProductsContent.length; i++){
                 const currentContent = displayProductsContent[i];
@@ -161,14 +184,27 @@ const view = {
                 const newCost = this.makeNewCost(currentContent.newCost);
                 const oldCost = this.makeOldCost(currentContent.oldCost);
                 const cost = this.makeCost(newCost, oldCost);
-                const addButton = this.makeAddButton(currentContent.addButton);
+                const addButton = this.makeAddButton(currentContent.addButton, currentContent.productCount);
                 const minusButton = this.makeMinusButton(currentContent.minusButton);
                 const productCount = this.makeProductCount(currentContent.productCount);
-                const plusButton = this.makeProductCount(currentContent.plusButton);
-                const minusProductCountPlus = this.makeMinusProductCountPlus(minusButton, productCount, plusButton);
+                const plusButton = this.makePlusButton(currentContent.plusButton);
+                const minusProductCountPlus = this.makeMinusProductCountPlus(minusButton, productCount, plusButton, currentContent.productCount);
                 const costAdd = this.makeCostAdd(cost, addButton, minusProductCountPlus);
                 const card = this.makeCard(offer, image, source, title, quantity, costAdd, currentContent.categories);
 
+                function callingClickingAddOrPlusButton() {
+                    this.clickingAddOrPlusButton(currentContent.title, categoryType);
+                };
+                let bindingCallingClickingAddOrPlusButton = callingClickingAddOrPlusButton.bind(this);
+                addButton.addEventListener("click", bindingCallingClickingAddOrPlusButton);
+                plusButton.addEventListener("click", bindingCallingClickingAddOrPlusButton);
+
+                function callingClickingMinusButton(){
+                    this.clickingMinusButton(currentContent.title, categoryType);
+                };
+                let bindingCallingClickingMinusButton = callingClickingMinusButton.bind(this);
+                minusButton.addEventListener("click", bindingCallingClickingMinusButton);
+                
                 this.productsToBeSold.append(card);
             }
         },
@@ -182,7 +218,7 @@ const view = {
             const offer = document.createElement('div');
             offer.className = 'offer';
             offer.innerHTML = offerInnerContent;
-            offer.append = 'offerText';
+            offer.append = offerText;
             return offer
         },
 
@@ -238,10 +274,12 @@ const view = {
             return cost;
         },
 
-        makeAddButton(addButtonInnerContent){
+        makeAddButton(addButtonInnerContent, productCount){
             const addButton = document.createElement('button');
             addButton.className = 'addButton';
             addButton.innerHTML = addButtonInnerContent;
+            if(productCount != 0)
+                addButton.style.display = 'none';
             return addButton;
         },
 
@@ -263,11 +301,13 @@ const view = {
             return plusButton;
         },
 
-        makeMinusProductCountPlus(minusButton, productCount, plusButton){
+        makeMinusProductCountPlus(minusButton, productCount, plusButton, productCountValue){
             const minusProductCountPlus = document.createElement('div');
             minusProductCountPlus.className = 'minusProductCountPlus';
             minusProductCountPlus.append(minusButton, productCount, plusButton);
-            minusProductCountPlus.style.display = 'none';
+            if(productCountValue == 0){
+                minusProductCountPlus.style.display = 'none';
+            }
             return minusProductCountPlus;
         },
 
@@ -283,6 +323,69 @@ const view = {
             card.className = categories;
             card.append(offer, image, source, title, quantity, costAdd);
             return card;
+        },
+
+        clickingAddOrPlusButton(currentProductTitle, categoryType){
+            controller.incrementProductCount(currentProductTitle, categoryType);
+        },
+
+        clickingMinusButton(currentProductTitle, categoryType){
+            controller.decrementProductCount(currentProductTitle, categoryType);
+        }
+    },
+
+    cartView : {
+        init(){
+            this.productsInCart = document.createElement('div');
+            this.productsInCart.style.display = 'none';
+
+            this.addToCartButton = document.getElementById('myCartButton');
+            
+            function callingRenderButton(){
+                this.render();
+            };
+            let bindingCallingRenderButton = callingRenderButton.bind(this)
+            this.addToCartButton.addEventListener("click", bindingCallingRenderButton);
+        },
+
+        render(){
+            this.mainContentDetails = document.getElementById('mainContentDetails');
+            this.mainContentDetails.style.display = 'none';
+            this.productsInCart.style.display = 'initial';
+            this.productsInCart.innerHTML = '';
+            const cartProductsHeader = document.createElement('strong');
+            cartProductsHeader.innerHTML = 'Items in Cart';
+            this.productsInCart.append(cartProductsHeader);
+
+            const cartProductsContent = controller.getProductCountCartProductsContent();
+            for(let i=0; i<cartProductsContent.length; i++){
+                const currentContent = cartProductsContent[i];
+                const title = this.makeTitle(currentContent.title);
+                const productCount = this.makeProductCount(currentContent.productCount);
+                const currentProduct = this.makeCurrentProduct(title, productCount);
+                this.productsInCart.append(currentProduct);
+            }
+            // this.productsInCart.append(controller.getTotalCost());
+            const flexContainer = document.getElementById('flexContainer');
+            flexContainer.append(this.productsInCart);
+        },
+
+        makeTitle(titleInnerContent){
+            const title = document.createElement('span');
+            title.innerHTML = titleInnerContent;
+            return title;
+        },
+
+        makeProductCount(productCountInnerContent){
+            const productCount = document.createElement('span');
+            productCount.innerHTML = productCountInnerContent;
+            return productCount;
+        },
+
+        makeCurrentProduct(title, productCount){
+            const currentProduct = document.createElement('div');
+            currentProduct.append(title, productCount);
+            return currentProduct;
         }
     }
 
@@ -297,19 +400,45 @@ const controller = {
     },
 
     getSidebarElements(){
-
-        //console.log(model)
         return model.SIDEBAR_CONTENTS;
     },
 
-    getDisplayProductsContent(categoryType){
-        //console.log(model.DISPLAY_PRODUCTS_CONTENT);
-        return model.getFilteredProducts(categoryType);
+    getCategoryDisplayProductsContent(categoryType){
+        return model.getCategoriesFilteredProducts(categoryType);
     },
 
     renderDisplayProductsView(categoryType){
         return view.displayProductsView.render(categoryType);
-    }
+    },
+
+    getProductCountCartProductsContent(){
+        return model.getProductCountFilteredProducts();
+    },
+
+    incrementProductCount(currentProductTitle, categoryType){
+        let ind = this.findIndexOfProduct(currentProductTitle);
+        model.DISPLAY_PRODUCTS_CONTENT[ind].productCount++;
+        this.renderDisplayProductsView(categoryType);
+    },
+
+    decrementProductCount(currentProductTitle, categoryType){
+        let ind = this.findIndexOfProduct(currentProductTitle);
+        model.DISPLAY_PRODUCTS_CONTENT[ind].productCount--;
+        this.renderDisplayProductsView(categoryType);
+    },
+
+    findIndexOfProduct(currentProductTitle){
+        for(let i=0; i<model.DISPLAY_PRODUCTS_CONTENT.length; i++){
+            //console.log(model.DISPLAY_PRODUCTS_CONTENT[i].title);
+            if(model.DISPLAY_PRODUCTS_CONTENT[i].title == currentProductTitle)
+                return i;
+        }
+        return -1;
+    },
+
+    // getTotalCost(){
+    //     return model.getTotalCost();
+    // }
 }
 
 controller.init();

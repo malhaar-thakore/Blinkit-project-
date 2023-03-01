@@ -65,7 +65,7 @@ const displayProductsView = {
     },
 
     assignInnerContent(){
-        this.offer.innerHTML = this.DISPLAY_PRODUCTS_CONTENT[this.i].offer;
+        this.offerText.innerHTML = this.DISPLAY_PRODUCTS_CONTENT[this.i].offer;
         this.image.src = this.DISPLAY_PRODUCTS_CONTENT[this.i].image;
         this.sourceText.innerHTML = this.DISPLAY_PRODUCTS_CONTENT[this.i].source;
         this.title.innerHTML = this.DISPLAY_PRODUCTS_CONTENT[this.i].title;

@@ -49,7 +49,7 @@ body {
     align-items: center;
 }
 
-.myCartButton{
+#myCartButton{
     display: flex;
     border: none;
     background: green;
@@ -93,7 +93,7 @@ body {
     overflow: hidden;
 }
 
-.mainContentDetails{
+#mainContentDetails{
     display: flex;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
@@ -178,6 +178,8 @@ body {
 
 .minusProductCountPlus{
     display: flex;
+    justify-content: space-between;
+    align-content: center;
 }
 
 .card{
