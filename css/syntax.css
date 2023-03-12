@@ -137,7 +137,7 @@ body {
     display: flex;
 }
 
-.centerBar{
+#centerBar{
     flex-grow: 2;
 }
 
