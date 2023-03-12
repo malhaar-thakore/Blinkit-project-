@@ -2,17 +2,17 @@ body {
     margin: 0;
 }
 
-.header-details{
+.headerDetails{
     display: flex;
     justify-content: space-between;
 }
 
-.header-left{
+.headerLeft{
     display: flex;
     /*justify-content: flex-start;*/
 }
 
-.header-right{
+.headerRight{
     display: flex;
 }
 
@@ -20,22 +20,28 @@ body {
     display: flex;
     font-size: 40px;
     margin-right: 2rem;
+    font-weight: 900;
+    border-right: 1px solid grey;
 }
 
-.logop1{
+.logoP1{
     color:gold;
 }
 
-.logop2{
+.logoP2{
     color:forestgreen;
 }
 
-.delivery-details{
+.deliveryDetails{
     display: flex;
     flex-direction: column;
 }
 
-.login-button{
+.deliveryArea{
+    border: none;
+}
+
+.loginButton{
     display: flex;
     border: none;
     background: white;
@@ -43,7 +49,7 @@ body {
     align-items: center;
 }
 
-.my-cart-button{
+#myCartButton{
     display: flex;
     border: none;
     background: green;
@@ -51,217 +57,157 @@ body {
     margin: 1px 6px;
 }
 
-.cart-image{
+.cartImage{
     display: flex;
     height: 2rem;
     width: 2rem;
 }
 
-.my-cart{
+.myCart{
     display: flex;
 }
 
-.navigation-bar{
-    border-top: 2px solid grey;
-    border-bottom: 2px solid grey;
+.navigationBar{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 
-.nav-details{
+.navDetails{
     display: flex;
     justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.nav-buttons{
+.navButtons{
     border: none;
     background: white;
     margin-right: 3rem;
     align-items: center;
 }
 
-.navigation-bar{
-    margin-top: 25px;
+.mainContent {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
 
-.main-content-details{
+#mainContentDetails{
     display: flex;
-    border: 2px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+   /* border: 2px solid grey;*/
 }
 
-.sidebar{
+#sidebar{
     display: flex;
     flex-direction: column;
 }
 
-.all{
+.sidebarButton{
     display: flex;
     align-items: center;
-    border: 2px solid grey;
-    background-color: chartreuse;
-    border-left-color: green;
+    background-color: white;
+    border: solid 1px grey;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+   /* border-left: 1px solid grey;
+    border-bottom: 1px solid grey;*/
+    /*background-color: chartreuse;
+    border-left-color: green;*/
 }
 
-.fresh-vegetables{
-    display: flex;
-    align-items: center;
-    border: 2px solid grey;
+.sidebarButton:hover{
+    background-color: green;
 }
 
-.fresh-fruits{
-    display: flex;
-    align-items: center;
-    border: 2px solid grey;
-}
-
-.exotics{
-    display: flex;
-    align-items: center;
-    border: 2px solid grey;
-}
-
-.seasonal{
-    display: flex;
-    align-items: center;
-    border: 2px solid grey;
-}
-
-.organic-hydroponic{
-    display: flex;
-    align-items: center;
-    border: 2px solid grey;
-}
-
-.freshly-cut-sprouts{
-    display: flex;
-    align-items: center;
-    border: 2px solid grey;
-}
-
-.all-image{
+.sidebarImage{
     display: flex;
     height: 2rem;
     width: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.fresh-vegetables-image{
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-}
-
-.fresh-fruits-image{
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-}
-
-.exotics-image{
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-}
-
-.seasonal-image{
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-}
-
-.organic-hydroponic-image{
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-}
-
-.freshly-cut-sprouts-image{
-    display: flex;
-    height: 2rem;
-    width: 2rem;
-}
-
-
-.all-text{
+.sidebarText{
     display: flex;
 }
 
-.fresh-vegetables-text{
-    display: flex;
-}
-
-.fresh-fruits-text{
-    display: flex;
-}
-
-.exotics-text{
-    display: flex;
-}
-
-.seasonal-text{
-    display: flex;
-}
-
-.organic-hydroponic-text{
-    display: flex;
-}
-
-.freshly-cut-sprouts-text{
-    display: flex;
-}
-
-.center-bar{
+#centerBar{
     flex-grow: 2;
 }
 
-.top-bar{
+.topBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 
-.top-bar-text{
+.topBarText{
     display: flex;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
 }
 
-.top-bar-dropdown{
+.topBarDropdown{
     display: flex;
+    margin-right: 1rem;
 }
 
-.display-items{
+#productsToBeSold{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .cost p{
     text-decoration: line-through;
 }
 
-.cost-add{
+.costAdd{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.minusProductCountPlus{
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 
 .card{
-    position: relative;
-    border: 2px solid grey;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
 }
 
-.card-images{
+.cardImages{
     height: 10rem;
     width: 18rem;
 }
 
+.card.ten{
+    border-bottom: none;
+    border-right: 1px solid grey;;
+}
+
 .offer{
-    position: absolute;
-    top: 5px;
-    left: 7px;
     background-color: blue;
     color: white;
+    width: max-content;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
 }
 
 .source{
-    position: absolute;
-    top: 55%;
-    right: 12px;
+    width: max-content;
+     margin-left: auto;
     color: rgb(121, 236, 121);
     background-color: rgb(214, 248, 214);
 }
@@ -270,7 +216,7 @@ body {
     margin-top:0.5px;
 }
 
-.add-button{
+.addButton{
     color: green;
     background: transparent;
 }
