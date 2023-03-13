@@ -19,7 +19,7 @@ const DISPLAY_PRODUCTS_CATEGORY_TYPES = {
     card: 'card'
 }
 
-function sidebarContent(categoryImage, categoryText, categoryType){
+function SidebarContent(categoryImage, categoryText, categoryType){
     this.categoryImage = categoryImage;
     this.categoryText = categoryText;
     this.categoryType = categoryType
@@ -41,7 +41,7 @@ function getProductCountFromLocalStorage(cartContent){
 
 
 
-function displayProduct({offer, image, source, title, quantity, newCost, oldCost,categories, productCount, cartContent}){
+function DisplayProduct({offer, image, source, title, quantity, newCost, oldCost,categories, productCount, cartContent}){
     this.offer = offer;
     this.image = image;
     this.source = source;
@@ -61,7 +61,7 @@ function displayProduct({offer, image, source, title, quantity, newCost, oldCost
     }
 };
 
-function cartProduct(currentProductTitle, productCount){
+function CartProduct(currentProductTitle, productCount){
     this.productTitle = currentProductTitle;
     this.productCount = productCount;
 };
@@ -87,19 +87,19 @@ const model = {
 
     createSidebarData(){
         this.sidebarContents = [
-            new sidebarContent('images/potato-img.png', 'All', SIDEBAR_CATEGORY_TYPES.all),
-            new sidebarContent('images/potato-img.png', 'Fresh Vegetables', SIDEBAR_CATEGORY_TYPES.freshVegetables),
-            new sidebarContent('images/fresh-fruits.jpeg', 'Fresh Fruits', SIDEBAR_CATEGORY_TYPES.freshFruits),
-            new sidebarContent('images/potato-img.png', 'Exotics', SIDEBAR_CATEGORY_TYPES.exotics),
-            new sidebarContent('images/potato-img.png', 'Seasonal', SIDEBAR_CATEGORY_TYPES.seasonal),
-            new sidebarContent('images/organic-hydroponic.jpeg', 'Organic & Hydroponic', SIDEBAR_CATEGORY_TYPES.organicHydroponic),
-            new sidebarContent('images/freshly-cut-sprouts.webp', 'Freshly Cut & Sprouts', SIDEBAR_CATEGORY_TYPES.freshlyCutSprouts)
+            new SidebarContent('images/potato-img.png', 'All', SIDEBAR_CATEGORY_TYPES.all),
+            new SidebarContent('images/potato-img.png', 'Fresh Vegetables', SIDEBAR_CATEGORY_TYPES.freshVegetables),
+            new SidebarContent('images/fresh-fruits.jpeg', 'Fresh Fruits', SIDEBAR_CATEGORY_TYPES.freshFruits),
+            new SidebarContent('images/potato-img.png', 'Exotics', SIDEBAR_CATEGORY_TYPES.exotics),
+            new SidebarContent('images/potato-img.png', 'Seasonal', SIDEBAR_CATEGORY_TYPES.seasonal),
+            new SidebarContent('images/organic-hydroponic.jpeg', 'Organic & Hydroponic', SIDEBAR_CATEGORY_TYPES.organicHydroponic),
+            new SidebarContent('images/freshly-cut-sprouts.webp', 'Freshly Cut & Sprouts', SIDEBAR_CATEGORY_TYPES.freshlyCutSprouts)
         ]
     },
 
     createDisplayProducts(){
         this.displayProductsContent = [
-            new displayProduct({
+            new DisplayProduct({
                 offer: 11, 
                 image: 'images/potato-img.png', 
                 source: 5, 
@@ -111,7 +111,7 @@ const model = {
                 productCount: 0, 
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 21,
                 image: 'images/onion-img.png',
                 source: 5, 
@@ -123,7 +123,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 10,
                 image: 'images/carrot-img.jpeg', source: 5,
                 title: 'Local Carrot',
@@ -134,7 +134,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 16,
                 image: 'images/green-chilli-img.png',
                 source: 5, 
@@ -146,7 +146,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 21,
                 image: 'images/hybrid-tomato.png',
                 source: 5,
@@ -158,7 +158,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 17,
                 image: 'images/cauliflower.jpeg',
                 source: 5,
@@ -170,7 +170,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
             
-            new displayProduct({
+            new DisplayProduct({
                 offer: 11,
                 image: 'images/potato-img.png',
                 source: 5,
@@ -182,7 +182,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 21,
                 image: 'images/onion-img.png',
                 source: 5,
@@ -194,7 +194,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 10,
                 image: 'images/carrot-img.jpeg',
                 source: 5,
@@ -206,7 +206,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 16,
                 image: 'images/green-chilli-img.png',
                 source: 5,
@@ -218,7 +218,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 21,
                 image: 'images/hybrid-tomato.png',
                 source: 5,
@@ -230,7 +230,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 11,
                 image: 'images/potato-img.png',
                 source: 5,
@@ -242,7 +242,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 21,
                 image: 'images/onion-img.png',
                 source: 5,
@@ -254,7 +254,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer:10,
                 image: 'images/carrot-img.jpeg',
                 source: 5,
@@ -266,7 +266,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 16,
                 image: 'images/green-chilli-img.png',
                 source: 5,
@@ -278,7 +278,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 11,
                 image: 'images/potato-img.png',
                 source: 5,
@@ -290,7 +290,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 21,
                 image: 'images/onion-img.png',
                 source: 5,
@@ -302,7 +302,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 10,
                 image: 'images/carrot-img.jpeg',
                 source: 5,
@@ -314,7 +314,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 11,
                 image: 'images/potato-img.png',
                 source: 5,
@@ -326,7 +326,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 21,
                 image: 'images/onion-img.png',
                 source: 5,
@@ -338,7 +338,7 @@ const model = {
                 productCount: 0,
                 cartContent: this.cartContent}),
 
-            new displayProduct({
+            new DisplayProduct({
                 offer: 11,
                 image: 'images/potato-img.png',
                 source: 5,
@@ -381,7 +381,7 @@ const model = {
     },
 
     addToCart(currentProductTitle){
-        this.cartContent.push(new cartProduct(currentProductTitle, 1));
+        this.cartContent.push(new CartProduct(currentProductTitle, 1));
     },
 
     updateCartContent(productTitle, val){
